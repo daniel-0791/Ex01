@@ -8,6 +8,14 @@ public class Bookt {
 	private String book_ID;
 	private String book_ISBN;
 	private String book_Name;
+	private int price;
+	private int qty;
+	public int getQty() {
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
 	public String getBook_ID() {
 		return book_ID;
 	}
@@ -71,7 +79,7 @@ public class Bookt {
 	private String book_Author;
 	private String bookType_ID;
 	private String publishing_ID;
-	private int price;
+
 	private String book_Publish_Time;
 	private String book_Num;
 	private String book_SaleNum;

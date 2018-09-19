@@ -32,26 +32,29 @@
 </head>
 <body>
      <!--<div><input type="button" value="新增" id="add"></div> -->
-     <h4>商品列表</h4>
+     <h4>购物车列表</h4>
     <br>
 	<div class="list">
         <table>
             <tr>
-                <th>book_ID</th>
+             
                 <th>book_ISBN</th>
                 <th>book_Name</th>
                 <th>book_Author</th>
                 <th>price</th>
+                 <th>book_SaleNum</th>
+                
                 <th>operation</th>
                
             </tr>
 		<c:forEach items="${allcart}" var="bookt" varStatus="status">
             <tr>
-          		 <td>${status.index + 1}</td> 
+          		
                 <td>${bookt.book_ISBN }</td>
                 <td>${bookt.book_Name }</td>
                 <td>${bookt.book_Author }</td>
                 <td>${bookt.price }</td>
+        		 <td>${bookt.book_SaleNum }</td>
                 <td><input type="button" value="删除" onclick="buy(${bookt.book_ID})"></td>
                   </tr>
         </c:forEach> 

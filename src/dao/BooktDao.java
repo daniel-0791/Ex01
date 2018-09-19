@@ -33,7 +33,7 @@ public class BooktDao {
 	public List<Bookt> getAllcart() throws SQLException{
 			
 			//1.查询操作
-			String sql = "select * from bookt a , cartt b where a.book_ID=b.book_ID";
+			String sql = "SELECT *FROM bookt a,(select book_ID ,sum(qty) book_SaleNum from  cartt  GROUP BY book_ID ) b WHERE a.book_ID=b.book_ID";
 			//2执行sql
 			List<Bookt> allbookt = null;
 			//得到所有书名信息
@@ -44,7 +44,7 @@ public class BooktDao {
 		public void save(int book_ID) throws SQLException {  
 			Connection conn =jdbcUtil. buildConnect();
 			System.out.println("test31");
-		String str = "insert into cartt(book_ID,qty)  values(?,1)";
+		String str = "insert into cartt(book_ID,cust_id,qty)  values(?,100000,1)";
 		PreparedStatement sql=conn.prepareStatement(str);
 		sql.setInt(1,book_ID);
 		
