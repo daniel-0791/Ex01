@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class BaseServlet
  */
 public class BaseServlet extends HttpServlet {
+	//Ã»ÓÃ×Å
 	private static final long serialVersionUID = 1L;
 
 	@Override

@@ -35,7 +35,7 @@ public class BooktServlet extends HttpServlet {
 					e.printStackTrace();
 				}//所有书名信息
 				//对集合进行反转
-				Collections.reverse(allBookt);
+				//Collections.reverse(allBookt);
 				//把数据写到request域 
 				request.setAttribute("allBookt", allBookt);
 				//转发	
